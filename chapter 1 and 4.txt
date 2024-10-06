@@ -1,0 +1,377 @@
+
+Python Lab Assignment Program(chapter 1 to 4)
+Make a separate notebook and submit on 1/10/24
+
+#############################################################
+1)python programming to print Hello World
+Code-print(“Hello World”)
+#####################################################################
+2)python program to calculate the area of a triangle
+Code:-
+base=float(input("Enter base of the triangle:"))
+height=float(input("Enter height of the triangle"))
+area=0.5*base*height
+print("Area of the Triangle=",area)
+######################################################################
+3) python program  to swap two variable
+Code:-
+Num1= int(input(“Enter First Number:”))
+Num2= int(input(“Enter second Number:”))
+Print(“Numbers Before swapping”)
+Print(“Num1=”,Num1)
+Print(“Num2=”,Num2)
+Temp=Num1
+Num1=Num2
+Num2=Temp
+Print(“Numbers after swapping”)
+Print(“Num1=”,Num1)
+Print(“Num2=”,Num2)
+###########################################################################
+4)Write a Python Program to Check if a Number is Positive, Negative or Zero 
+Code:-
+Num= float(input(“Enter a number: ”))
+If num >= 0:
+	If num ==0:
+   Print(“Zero”)
+else:
+   print(“Positive number”)
+else:
+   print(“Negative Number”)
+#############################################################################
+5)Write a Python Program to Check Leap Year
+code:-
+Year = int(input(“Enter year to be checked: “))
+If(year%4==0 and year%100!=0 or year%400==0):
+     Print(year,”is a leap year!”)
+Else:
+     Print(year,”isn’t a leap year!” )
+###############################################################################
+6)Write a Python Program to Print all Prime Numbers in an Interval
+code:-
+Start = int(input(“Enter starting number:”))
+End=int(input(“Enter ending number:”))
+For n in range(start,end + 1):
+       If (n>1):
+             For  I in range(2,n):
+                     If(n%i)==0:
+                           Break
+Else:
+       Print(n)
+##############################################################################
+ 7)Write a Python Program to Print the Fibonacci sequence 
+code:-
+Num=int(input(“Enter how many number u want to display:”))
+X=0
+Y=1
+C=2
+Print(“Fibonacci sequence is:”)
+Print(x)
+Print(y)
+While(c<num):
+         Z=x+y
+Print(z)
+X=y
+Y=z
+C+=1
+#################################################################################
+ 8)Write a Python Program to Check Armstrong Number
+code:-
+N=int(input(“Enter a number:”))
+Num=n
+Sum=0
+While(n>0):
+Rem=n%10
+Sum=sum +rem*rem*rem
+N=int(n/10)
+If num ==sum:
+Print(num,”is Armstrong”)
+Else:
+Print(num,”is not armstrong “)
+#####################################################################################
+9)Write a Python Program to Find the Sum of Natural Numbers 
+code:-
+N = int(input(“Enter the value of N: “))
+
+count = N
+total = 0
+
+while count:
+    total += count
+    count -= 1
+print(“The sum of the first N natural numbers is:”, total)
+##################################################################################
+10)Write a Python Program to Find the Factorial of a Number 
+code:-
+Num=(int(input(“Enter number:”))
+Fact=1
+If num<0:
+Print(“factorial does not exist for negative numbers”)
+Elif num ==0:
+Print(“The factorial of 0 is 1”)
+Else:
+For I in range(1,num+1):
+Fact=fact*i
+Print(“The factorial of “,num,”is”,fact)
+######################################################################################
+11)Write a python program to Reverse words in a given String
+Code:
+string=input("Enter the string:")
+words=string.split()
+words=list(reversed(words))
+print(" ".join(words))
+##############################################################################
+12)Write a python program Words Frequency in String Shorthands
+code:-
+string="This is python programming"
+print(string)
+word={key: string.count(key) for key in string.split()}
+print("words in the string")
+print(word)
+#########################################################################
+13)Write a python program Convert Snake case to Pascal case
+code:-
+test="python programming is best"
+print(test)
+res=test.replace("_"," ").title().replace(" "," ")
+print("the string after changing case:"+str(res))
+############################################################################
+14)Write a python program to print even length words in a string
+code:-
+countwords=len("python is the best programming books for practice".split())
+print("count words in a statment:",countwords)
+print(len("python is the best programming books for practice".split()))
+############################################################################
+15)Write a python program to accept the strings which contains all vowels
+code:-
+string=input("enter the string:")
+string=string.lower()
+vowel=set("aeiou")
+for char in string:
+    if char in vowel:
+        vowel.remove(char)
+print("Enter the string is ",string)
+if len(vowel)==0:
+    print("The string contains vowels")
+else:
+    print("The string does not contain vowels") 
+####################################################################################
+16) Write a python program to remove i’th character from string in different ways
+Code:-
+string="python"
+i=4
+print("original:",string)
+new_s=""
+for k in range(len(string)):
+    if k!=i-1:
+        new_s=new_s+string[k]
+print("After removing:",new_s)
+##########################################################################################
+List
+17)Write a Python program to sum all the items in a list.
+total=0
+list1=[10,22,30,58,46,66]
+for dat in range(0,len(list1)):
+    total=total+list1[dat]
+print("Sum of all data items in list:",total)
+#######################################################################
+18) Write a Python program to multiplies all the items in a list.
+
+def multiplylistelement(listmul):
+    result=1
+    for x in listmul:
+        result=result*x
+    return result
+list1=[1,2,4]
+list2=[1,2,5]
+print(multiplylistelement(list1))
+print(multiplylistelement(list2))
+######################################################################
+19)Write a Python program to get a list, sorted in increasing order by the last element in
+each tuple from a given list of non-empty tuples.
+
+Code- def last(n):
+	return n[-1] 
+
+def sort(tuples):
+	return sorted(tuples, key=last)
+
+a=[(1, 3), (3, 2), (2, 1)]
+print("Sorted:")
+print(sort(a))
+
+#########################################################################
+Tuples
+
+20)Write a Python program to create a tuple.
+
+exampletuple = ("apple", "banana", "Jackfruit")
+print(exampletuple)
+
+###################################################################
+21)Write a Python program to create a tuple with different data types.
+
+tuplex = ("tuple", False, 3.2, 1)
+	print(tuplex)
+#######################################################################
+22)Write a Python program to check whether an element exists within a tuple.
+
+tuplex = ("w", 3, "r", "e", "s", "o", "u", "r", "c", "e")
+print("r" in tuplex)
+print(5 in tuplex)
+
+########################################################################
+
+SET
+23)Write a Python program to create a set.
+exampleset = {"apple", "banana", "Jackfruit"}
+print(exampleset)
+
+########################################################################
+24)write a python program iterate over a set
+test_set=set(“hiiii”)
+For val in test_set:
+Print(val)
+#########################################################################
+25) Write a Python program to create set difference.
+first_set = {1, 2, 3, 4, 5, 6}
+second_set = {4, 5, 6, 7, 8, 9}
+first_set.difference(second_set)
+alternative code:-
+first_set - second_set     
+#####################################################################
+Dictionary
+
+26)Write a Python script to sort (ascending and descending) a dictionary by value.
+input_dict = {'Math': 90, 'DSA': 80, 'Algo': 95, 'Python': 75}
+
+# sorting values in descending order
+output = dict(sorted(input_dict.items(), key=lambda item: item[1], reverse=True))
+print(output)
+###########################################################################
+27)Write a Python script to add a key to a dictionary.
+d = {0: 10, 1: 20}
+print(d)
+d.update({2: 30})
+print(d)
+#######################################################################
+28)Write a Python program to iterate over dictionaries using for loops.
+d = {'Red': 1, 'Green': 2, 'Blue': 3}
+for color_key, value in d.items():
+   print(color_key, 'corresponds to ', d[color_key])
+##########################################################################
+SET B
+
+29.Write a Python program to remove duplicates from a list.
+def Remove(duplicate):
+	final_list = []
+	for num in duplicate:
+		if num not in final_list:
+			final_list.append(num)
+	return final_list
+	
+
+duplicate = [2, 4, 10, 20, 5, 2, 20, 4]
+print(Remove(duplicate))
+
+or 
+duplicate = [2, 4, 10, 20, 5, 2, 20, 4]
+print(list(set(duplicate)))
+##############################################################################
+30.Write a Python program to check a list is empty or not.
+def En1(lis1):
+    if len(lis1) == 0:
+        return 0
+    else:
+        return 1
+lis1 = []
+if En1(lis1):
+    print("The list is not empty")
+else:
+    print("Empty List")
+####################################################################################
+TUPLE
+31.Write a Python program to convert a list to a tuple.
+def convert(list):
+    return tuple(list)
+list = [1, 2, 3, 4]
+print(convert(list))
+##################################################################################
+32.Write a Python program to remove an item from a tuple.
+ test_list = [(5, 6, 7), (7, 2, 4, 6), (6, 6, 7), (6, 10, 8)]
+print("The original list is : " + str(test_list))
+N = 6
+res = [tuple(ele for ele in sub if ele != N) for sub in test_list]
+print("The Tuple List after removal of element : " + str(res))
+#####################################################################################
+33. Write a Python program to slice a tuple.
+List_of_tuples=[(1,’apple’),(2,’banana’),(3,’orange’),(4,’grape’)]
+Sliced_test= List_of_tuples[1:3]
+Print(Sliced_test)
+################################################################################
+34.Write a Python program to find the length of a tuple.
+Tuple=(1,0,4,2,5,6,7,5)
+Print(len(tuple))
+###########################################################################
+SET
+35.Write a Python program to check if a set is a subset of another set.
+s1 = {1, 2, 3, 4, 5}
+s2 = {4, 5}
+print(s2.issubset(s1))
+############################################################################
+36.Write a Python program to find maximum and the minimum value in a set.
+def MAX(sets):
+    return (max(sets))
+sets = set([8, 16, 24, 1, 25, 3, 10, 65, 55])
+print(MAX(sets))
+def MIN(sets):
+	return (min(sets))
+sets = set([4, 12, 10, 9, 4, 13])
+print(MIN(sets))
+###########################################################################
+37.Write a Python program to find the length of a set
+set1 = set() 
+set1.add(8) 
+set1.add(9) 
+set1.add((6, 7)) 
+print("The length of set is:", len(set1))
+############################################################################
+file
+38.How to create,write and read file
+#To open a file on computer in python folder
+f=open("text1.txt","x")
+print("File created")
+#To write in created python file
+f=open("text1.txt","w")
+f.write("assd\n")
+f.write("ddvd\n")
+f.write("etre\n")
+f.write("dsfd\n")
+f.close()
+#to read created python file
+f=open("text1.txt","r")
+print(f.read())
+############################################################################
+39.Write a Python program to read an entire text file.
+file=open("text1.txt","r")
+print("read file:")
+print(file.read())
+print()
+file.seek(0)
+print("readlines function")
+print(file.readline())
+print()
+file.seek(0)
+print("readlines function")
+print(file.readlines())
+file.close()
+#############################################################################
+
+
+
+
+
+
+
+
+
+
